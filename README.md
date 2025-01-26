@@ -8,7 +8,6 @@
 4. [Usage](#usage)
 5. [Results](#results)
 6. [Future Work](#future-work)
-7. [Contributing](#contributing)
 
 
 ## **1. Overview**
@@ -31,18 +30,14 @@ The [Breast Cancer METABRIC dataset](https://www.kaggle.com/datasets/gunesevitan
 
 
 ## **4. Usage**
-1. Load and preprocess the dataset using `load_and_preprocess.ipynb`.
-<!--2. Perform survival analysis using `survival_analysis.ipynb`.
-<!--3. Visualize results (e.g., Kaplan-Meier curves) in the notebook.
+<!--1. Load and preprocess the dataset using `load_and_preprocess.ipynb`.
+2. Perform survival analysis using `survival_analysis.ipynb`.
+3. Visualize results (e.g., Kaplan-Meier curves) in the notebook.
 4. Use the provided scripts for batch processing or reproducible workflows.-->
 
 
 ## **5. Results**
--
+
+
 
 ## **6. Future Work**
-
-
-## **7. Contributing**
-Contributions are welcome! Please fork the repository and submit a pull request for any improvements or new features.
-
