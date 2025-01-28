@@ -22,8 +22,8 @@ The [Breast Cancer METABRIC dataset](https://www.kaggle.com/datasets/gunesevitan
 - **Survival Analysis**:
   - 
 - **Data Imputation**:
-  - Mode and Median Imputation
-  - KNN Imputation
+  - Mode Imputation
+
 - **Tools**:
   - Python, pandas, numpy
   - seaborn, matplotlib
