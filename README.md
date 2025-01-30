@@ -62,33 +62,33 @@ The primary goal is to **study survival time** and its influencing factors.
 ---
 
 ## **4. Usage**
-### **1️⃣ Load and preprocess the dataset**
+### **1. Load and preprocess the dataset**
    - **Script:** `load_preprocess_data.ipynb`
    - Cleans dataset, performs **mode imputation**, and prepares it for analysis.
 
-### **2️⃣ Perform Exploratory Data Analysis (EDA)**
+### **2. Perform Exploratory Data Analysis (EDA)**
    - **Script:** `eda_analysis.ipynb`
    - Visualizes distributions, correlations, and key patterns in survival-related features.
 
-### **3️⃣ Conduct Survival Analysis**
+### **3. Conduct Survival Analysis**
    - **Script:** `survival_analysis.ipynb`
    - Implements **Kaplan-Meier Curves**, **Log-Rank Tests**, and **Cox Proportional Hazards Model**.
 
 ---
 
 ## **5. Results**
-### 🔹 **Key Findings from EDA**
-✔ **Stage 2 is the most common tumor stage (~1700 cases).**  
-✔ **Survival probability decreases with increasing age.**  
-✔ **Patients with hormone therapy tend to have longer survival times.**  
-✔ **Chemotherapy is selectively applied, mostly in aggressive cases.**  
-✔ **Kaplan-Meier analysis confirms lower survival probabilities for Stage 3 & 4 patients.**  
+### **Key Findings from EDA**
+**Stage 2 is the most common tumor stage (~1700 cases).**  
+**Survival probability decreases with increasing age.**  
+**Patients with hormone therapy tend to have longer survival times.**  
+**Chemotherapy is selectively applied, mostly in aggressive cases.**  
+**Kaplan-Meier analysis confirms lower survival probabilities for Stage 3 & 4 patients.**  
 
-### 🔹 **Survival Analysis Insights**
-✔ **Higher tumor stages correlate with lower survival probabilities.**  
-✔ **Patients with relapse-free survival ≈ overall survival represent a key subgroup for analysis.**  
-✔ **Kaplan-Meier curves show significant survival differences across treatment groups.**  
-✔ **Cox Proportional Hazards Model will be applied next to quantify risk factors.**  
+### **Survival Analysis Insights**
+**Higher tumor stages correlate with lower survival probabilities.**  
+**Patients with relapse-free survival ≈ overall survival represent a key subgroup for analysis.**  
+**Kaplan-Meier curves show significant survival differences across treatment groups.**  
+**Cox Proportional Hazards Model will be applied next to quantify risk factors.**  
 
 ---
 
