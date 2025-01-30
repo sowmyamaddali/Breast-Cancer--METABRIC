@@ -78,17 +78,17 @@ The primary goal is to **study survival time** and its influencing factors.
 
 ## **5. Results**
 ### **Key Findings from EDA**
-**Stage 2 is the most common tumor stage (~1700 cases).**  
-**Survival probability decreases with increasing age.**  
-**Patients with hormone therapy tend to have longer survival times.**  
-**Chemotherapy is selectively applied, mostly in aggressive cases.**  
-**Kaplan-Meier analysis confirms lower survival probabilities for Stage 3 & 4 patients.**  
+- **Stage 2 is the most common tumor stage (~1700 cases).**  
+- **Survival probability decreases with increasing age.**  
+- **Patients with hormone therapy tend to have longer survival times.**  
+- **Chemotherapy is selectively applied, mostly in aggressive cases.**  
+- **Kaplan-Meier analysis confirms lower survival probabilities for Stage 3 & 4 patients.**  
 
 ### **Survival Analysis Insights**
-**Higher tumor stages correlate with lower survival probabilities.**  
-**Patients with relapse-free survival ≈ overall survival represent a key subgroup for analysis.**  
-**Kaplan-Meier curves show significant survival differences across treatment groups.**  
-**Cox Proportional Hazards Model will be applied next to quantify risk factors.**  
+- **Higher tumor stages correlate with lower survival probabilities.**  
+- **Patients with relapse-free survival ≈ overall survival represent a key subgroup for analysis.**  
+- **Kaplan-Meier curves show significant survival differences across treatment groups.**  
+- **Cox Proportional Hazards Model will be applied next to quantify risk factors.**  
 
 ---
 
