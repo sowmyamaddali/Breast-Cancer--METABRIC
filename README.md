@@ -93,7 +93,7 @@ The primary goal is to **study survival time** and its influencing factors.
 ---
 
 ## **6. Future Work**
-- **Expand Survival Modeling**
+<!-- - **Expand Survival Modeling**
   - Apply **Cox Proportional Hazards Model** to estimate the influence of multiple factors on survival time.
   - Investigate **non-linear survival models** (e.g., Random Survival Forests).
   
@@ -103,7 +103,7 @@ The primary goal is to **study survival time** and its influencing factors.
 
 - **Develop a Predictive Model**
   - Build a **risk stratification tool** for predicting **high-risk patients**.
-  - Use machine learning approaches for **advanced survival prediction**.
+  - Use machine learning approaches for **advanced survival prediction**. -->
 
 ---
 
