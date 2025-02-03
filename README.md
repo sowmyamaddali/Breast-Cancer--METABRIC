@@ -12,13 +12,13 @@
 ---
 
 ## **1. Overview**
-This project leverages the **Breast Cancer METABRIC dataset** to analyze survival outcomes, focusing on identifying **clinical and molecular factors** influencing patient survival.  
-Key analyses include:
+This project leverages the **Breast Cancer METABRIC dataset** to analyze survival outcomes and predict patient survival based on clinical and molecular features. The project consists of:
 - **Exploratory Data Analysis (EDA)** – Understanding distributions and patterns in tumor stages, treatments, and survival times.  
 - **Survival Analysis** – Applying Kaplan-Meier estimators, log-rank tests, and Cox Proportional Hazards models.  
-- **Data Imputation & Preprocessing** – Handling missing values using mode imputation.  
+- **Predictive Modeling** – Using **Machine Learning (Logistic Regression, Random Forest, XGBoost, Neural Networks)** to classify patients as high-risk vs. low-risk.  
+- **Clustering Analysis** – Applying **K-Means clustering** to identify hidden subgroups of patients based on cancer characteristics.  
 
-The goal is to provide **insights into survival probabilities** and the **impact of treatments, tumor characteristics, and patient demographics**.
+The goal is to provide **insights into survival probabilities**, the **impact of treatments and tumor characteristics**, and **hidden patient subgroups** for better risk stratification.
 
 ---
 
@@ -28,15 +28,27 @@ The [Breast Cancer METABRIC dataset](https://www.kaggle.com/datasets/gunesevitan
 - **Pathological Markers**: HER2 status, PR status, lymph node involvement, etc.
 - **Survival Data**: Overall survival in months, relapse-free survival, patient status.
 
-The primary goal is to **study survival time** and its influencing factors.
+The primary goal is to **study survival time**, predict high-risk patients, and uncover potential hidden subgroups.
 
 ---
 
 ## **3. Techniques and Tools**
+
 ### **Survival Analysis**
 - **Kaplan-Meier Survival Curves** – To estimate survival probabilities across tumor stages and treatment groups.
 - **Log-Rank Test** – To statistically compare survival distributions.
 - **Cox Proportional Hazards Model** – To assess risk factors affecting survival.
+
+### **Predictive Modeling (Machine Learning & Deep Learning)**
+- **Logistic Regression** – Baseline model for predicting patient survival.
+- **Random Forest & XGBoost** – Tree-based models optimized using hyperparameter tuning.
+- **Neural Networks (MLP)** – Deep learning model to improve prediction accuracy.
+- **Model Performance Metrics**: **Accuracy, F1-score, ROC-AUC**.
+
+### **Clustering Analysis (Unsupervised Learning)**
+- **K-Means Clustering** – To identify hidden subgroups of patients.
+- **PCA Visualization** – To reduce dimensionality and visualize clusters.
+- **Cluster Interpretation** – Comparing clinical features and survival rates per cluster.
 
 ### **EDA (Exploratory Data Analysis)**
 - **Distributions**:
@@ -45,26 +57,21 @@ The primary goal is to **study survival time** and its influencing factors.
   - Tumor Size vs Tumor Stage
   - Survival Time Across Age Groups
   - Treatment Impact on Survival
-- **Cluster Analysis**:
-  - Patients where **Relapse-Free Status ≈ Overall Survival**
-  - **Stage 3 vs Stage 4 survival patterns**
 - **Boxplots & Scatter Plots** to explore **treatment outcomes** and **tumor progression trends**.
-
-### **Data Imputation**
-- **Mode Imputation** – Used for handling missing categorical values.
 
 ### **Tools Used**
 - **Python Libraries**:  
   - `pandas`, `numpy` – Data processing  
   - `matplotlib`, `seaborn` – Visualization  
   - `lifelines` – Survival analysis  
+  - `scikit-learn`, `xgboost`, `tensorflow/keras` – Machine Learning & Deep Learning  
 
 ---
 
 ## **4. Usage**
 ### **1. Load and preprocess the dataset**
    - **Script:** `load_preprocess_data.ipynb`
-   - Cleans dataset, performs **mode imputation**, and prepares it for analysis.
+   - Cleans dataset, handles missing values, and prepares it for analysis.
 
 ### **2. Perform Exploratory Data Analysis (EDA)**
    - **Script:** `eda_analysis.ipynb`
@@ -74,36 +81,48 @@ The primary goal is to **study survival time** and its influencing factors.
    - **Script:** `survival_analysis.ipynb`
    - Implements **Kaplan-Meier Curves**, **Log-Rank Tests**, and **Cox Proportional Hazards Model**.
 
+### **4. Train Machine Learning Models for Survival Prediction**
+   - **Script:** `ml_modeling.ipynb`
+   - Implements **Logistic Regression, Random Forest, XGBoost, and Neural Networks**.
+   - Optimizes models using **hyperparameter tuning**.
+   - Evaluates model performance using **ROC-AUC and classification metrics**.
+
+### **5. Perform Clustering Analysis**
+   - **Script:** `clustering_analysis.ipynb`
+   - Uses **K-Means clustering** to identify subgroups of patients.
+   - Visualizes clusters with **PCA** and **analyzes survival rates per cluster**.
+
 ---
 
 ## **5. Results**
-### **Key Findings from EDA**
-- **Stage 2 is the most common tumor stage (~1700 cases).**  
-- **Survival probability decreases with increasing age.**  
-- **Patients with hormone therapy tend to have longer survival times.**  
-- **Chemotherapy is selectively applied, mostly in aggressive cases.**  
-- **Kaplan-Meier analysis confirms lower survival probabilities for Stage 3 & 4 patients.**  
+### **Predictive Modeling Insights**
+- **Random Forest & XGBoost performed best (ROC-AUC: 0.79, Accuracy: 72%)**.
+- **Neural Networks improved accuracy to 74% but had similar AUC (0.76)**.
+- **Tumor size, Nottingham Prognostic Index, and Age were key predictive features.**
+
+### **Clustering Analysis Insights**
+- **Identified 5 patient subgroups with distinct tumor characteristics and treatment patterns.**
+- **Clusters varied significantly in survival rates, confirming the existence of high-risk vs low-risk groups.**
+- **Cluster 0 had the lowest survival rate, while Cluster 1 had the highest.**
 
 ### **Survival Analysis Insights**
-- **Higher tumor stages correlate with lower survival probabilities.**  
-- **Patients with relapse-free survival ≈ overall survival represent a key subgroup for analysis.**  
-- **Kaplan-Meier curves show significant survival differences across treatment groups.**  
-- **Cox Proportional Hazards Model will be applied next to quantify risk factors.**  
+- **Higher tumor stages correlate with lower survival probabilities.**
+- **Patients with hormone therapy showed better survival outcomes.**
+- **Kaplan-Meier curves showed significant survival differences across treatment groups.**
 
 ---
 
 ## **6. Future Work**
-<!-- - **Expand Survival Modeling**
-  - Apply **Cox Proportional Hazards Model** to estimate the influence of multiple factors on survival time.
-  - Investigate **non-linear survival models** (e.g., Random Survival Forests).
-  
-- **Optimize Treatment Analysis**
-  - Assess the impact of **treatment combinations** on survival rates.
-  - Compare survival trends in patients receiving **single vs. multiple treatments**.
+- **Enhance Predictive Modeling:**  
+  - Apply **Survival Random Forests** for better survival time prediction.
+  - Experiment with **Transformer-based deep learning models**.
 
-- **Develop a Predictive Model**
-  - Build a **risk stratification tool** for predicting **high-risk patients**.
-  - Use machine learning approaches for **advanced survival prediction**. -->
+- **Refine Clustering Approaches:**  
+  - Test **Hierarchical Clustering** and **DBSCAN** for more nuanced subgroup discovery.
+  - Use **SHAP analysis** to interpret clustering impact on survival.
+
+- **Develop a Clinical Decision Tool:**  
+  - Build an interactive dashboard to help doctors identify high-risk patients.
+  - Incorporate clustering-based risk stratification for **personalized treatment recommendations**.
 
 ---
-
